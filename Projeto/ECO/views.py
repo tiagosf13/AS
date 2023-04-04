@@ -26,7 +26,6 @@ def get_json():
     return jsonify(coins)
 
 
-
 @views.route("/data/<id>")
 def get_data(id):
     data = get_json_data(id)
@@ -162,4 +161,3 @@ def signup():
             return redirect(url_for("views.login", username=username))
     else:
         return render_template("signup.html")
-
